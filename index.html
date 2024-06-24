@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="images/img.ico" type="image/logo">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>       
+    <script src="https://kit.fontawesome.com/880166cee8.js" crossorigin="anonymous"></script>
+    <title>HANDLE IT | FAST UPLOAD</title>
+
+    
+</head>
+<body class="  bg-[#fbb8d8] ">
+          <div
+          class=" bg-cover bg-no-repeat  bg-opacity-20"
+            style="background-image: url('images/purplebg.png')">
+      
+          <nav
+            class="sticky top-0 start-0 z-0 block w-full max-w-full text-black bg-[#ffffff] border rounded-none shadow-md h-max lg:px-8 lg:py-4">
+            <div class="flex items-center justify-between text-blue-gray-900">
+                <div class="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer">
+                    <img src="images/logo.ico" class="h-10" alt="Website Logo">
+                    <span class="self-center text-2xl font-extrabold whitespace-nowrap text-[#3a4936]">Handle It</span>
+                </div>
+              <div class="flex items-center gap-4">
+                <div class="hidden mr-4 lg:block">
+                  <ul class="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+                    <li class="block p-1 font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
+                      <a href="#" class="flex items-center font-semibold hover:bg-[#351c29] md:hover:bg-transparent md:hover:text-[#e89fcf]">
+                        Home
+                      </a>
+                    </li>
+                    <li class="block p-1 font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
+                      <a href="#services" class="flex items-center font-semibold hover:bg-[#351c29] md:hover:bg-transparent md:hover:text-[#e89fcf]">
+                        About Us
+                      </a>
+                    </li>
+                    <li class="block p-1 font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
+                      <a href="#" class="flex items-center font-semibold hover:bg-[#351c29] md:hover:bg-transparent md:hover:text-[#e89fcf]">
+                        Explore
+                      </a>
+                    </li>
+                    <li class="block p-1 font-sans text-sm antialiased font-normal leading-normal text-blue-gray-900">
+                      <a href="#" class="flex items-center font-semibold hover:bg--[#351c29] md:hover:bg-transparent md:hover:text-[#e89fcf]">
+                        Contact Us
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex items-center gap-x-1">
+                  <div>
+                    <a href="#login-section" class="hidden px-4 py-2 font-sans text-xs font-bold text-center text-gray-900 uppercase align-middle transition-all rounded-lg select-none hover:bg-gray-900/10 active:bg-gray-900/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block">
+                        <span>Log In</span>
+                    </a>
+                </div>
+                  <button
+                    class="hidden select-none rounded-lg bg-[#e1e2f1] py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-black shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
+                    type="button">
+                    <span>Sign Up for free</span>
+                  </button>
+                </div>
+                <button
+                  class="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
+                  type="button">
+                  <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor"
+                      stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </nav>
+
+            <div class="flex justify-center items-start">
+              <div class="flex container mx-auto space-y-0 md:space-y-0 md:space-x-10 items-start">
+                  <div class="flex flex-col items-center md:items-start py-10">
+                      
+                      <img src="images/textw.png" class="mx-9"  alt="Image not loaded">
+                      <img src="images/upload-r.png" class="h-auto max-w-md " alt="Image not loaded">
+                  </div>
+                  <div class="flex py-28 px-6 md:px-10 container">
+                      <div class="bg-[#ffffff] bg-opacity-55 p-6 rounded shadow-md flex flex-col justify-center w-full max-w-lg mx-auto">
+                          <form id="uploadForm" class="mb-6 flex flex-col items-center">
+                              <label class="block text-gray-700 text-sm font-bold mb-4" for="fileInput">
+                                  <i class="fas fa-cloud-upload-alt text-lg mr-2"></i> Upload Your Files
+                              </label>
+                              <input type="file" id="fileInput" multiple class="bg-[#c7bdbd] block w-full text-md text-[#50463d] border border-[#463e46] cursor-pointer focus:outline-none px-3 py-2 mb-4">
+                              <button type="submit" class="mt-4 px-4 py-2 bg-gradient-to-r from-[#ff6692] via-[#d669bf] to-[#a86bb9] text-white rounded font-bold">Upload Files</button>
+                          </form>
+                          <div id="fileGroups" class="mt-6"></div>
+                          <section class="progress-area mt-6"></section>
+                    <section class="uploaded-area mt-6"></section>
+                      </div>
+                  </div>
+
+            <div class="flex-col container px-20 py-32 ml-4">
+                  <button type="submit" class="bg-white rounded px-24 py-4 text-black font-bold ">
+                    <i class="fas fa-image me-1 h-4 w-4"></i>
+                    Image Converter
+                  </button>
+                  <button type="submit" class="bg-white rounded my-8 px-24 py-4 text-black font-bold">
+                    <i class="fas fa-video me-1 h-4 w-4"></i>
+                    Video Converter
+                  </button>
+                  <button type="submit" class="bg-white rounded my-0 px-20 py-4 text-black font-bold">
+                    <i class="fas fa-file me-1 h-4 w-4"></i>
+                    Document Converter
+                  </button>
+                
+            </div>
+        </div>
+      </div>
+
+
+      
+    </div>
+        
+      </div>
+    
+<!-- Services Section Start -->
+<section id="services" class="py-24">
+  <div class="container px-4">
+    <div class="text-center">
+      <h2 class="mb-12 text-4xl text-gray-700 font-bold tracking-wide">
+        Our Services
+      </h2>
+    </div>
+    <div class="flex flex-wrap">
+      <!-- Services item -->
+      <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3">
+        <div class="m-4">
+          <div class="mb-4 text-[#e698e6] text-5xl">
+            <i class="fas far far far fa-file-archive"> </i>
+          </div>
+          <div>
+            <h3
+              class="
+                text-gray-800
+                font-semibold
+                text-lg
+                block
+                mb-3
+                uppercase
+              "
+            >
+            File Upload Platform
+            </h3>
+            <p class="text-gray-600">
+              Seamlessly upload your files with our user-friendly platform. Our intuitive interface allows you to quickly and 
+              securely upload your documents, images, videos, and more. Enjoy fast and reliable file handling.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Services item -->
+      <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3">
+        <div class="m-4">
+          <div class="mb-4 text-[#e698e6]  text-5xl">
+            <i class="fas far fa-file-image"> </i>
+          </div>
+          <div>
+            <h3
+              class="
+                text-gray-800
+                font-semibold
+                text-lg
+                block
+                mb-3
+                uppercase
+              "
+            >
+            Image Converter
+            </h3>
+            <p class="text-gray-600">
+              Convert your images effortlessly with our powerful image conversion tool. Whether you need to change 
+              formats, resize, or optimize images, our converter ensures high-quality results in no time.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Services item -->
+      <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3">
+        <div class="m-4">
+          <div class="mb-4 text-[#e698e6]  text-5xl">
+            <i class="fas fas fa-video"> </i>
+          </div>
+          <div>
+            <h3
+              class="
+                text-gray-800
+                font-semibold
+                text-lg
+                block
+                mb-3
+                uppercase
+              "
+            >
+            Video Converter
+            </h3>
+            <p class="text-gray-600">
+              Transform your video files with ease using our advanced video converter. Convert between 
+              different video formats, compress files, or extract audio with just a few clicks. Maintain 
+              quality and achieve your desired output.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Services item -->
+      <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3">
+        <div class="m-4">
+          <div class="mb-4 text-[#e698e6]  text-5xl">
+            <i class="fas fas fab fab far fa-clipboard"> </i>
+          </div>
+          <div>
+            <h3
+              class="
+                text-gray-800
+                font-semibold
+                text-lg
+                block
+                mb-3
+                uppercase
+              "
+            >
+            Document Converter
+            </h3>
+            <p class="text-gray-600">
+              Streamline your document conversions with our efficient document converter. Easily convert 
+              PDFs to Word, Excel, PowerPoint, and other formats, or vice versa. Our tool preserves 
+              formatting and ensures accuracy.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Services item -->
+      <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3">
+        <div class="m-4">
+          <div class="mb-4 text-[#e698e6]  text-5xl">
+            <i class="fas fa-mobile"> </i>
+          </div>
+          <div>
+            <h3
+              class="
+                text-gray-800
+                font-semibold
+                text-lg
+                block
+                mb-3
+                uppercase
+              "
+            >
+            Online File Storage            </h3>
+            <p class="text-gray-600">
+              Securely store and manage your files in the cloud with our online file storage 
+              service. Access your files from anywhere, share them with others, and keep 
+              your data safe with our reliable storage solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Services item -->
+      <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/3">
+        <div class="m-4">
+          <div class="mb-4 text-[#e698e6]  text-5xl">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <div>
+            <h3
+              class="
+                text-gray-800
+                font-semibold
+                text-lg
+                block
+                mb-3
+                uppercase
+              "
+            >
+            Batch File Processing
+            </h3>
+            <p class="text-gray-600">
+              Save time with our batch file processing capabilities. Upload multiple files at once and apply 
+              conversions or actions to all of them simultaneously. Our platform handles large volumes 
+              with speed and precision.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Services Section End -->
+<div class="container mx-auto mt-16 p-4">
+  <div class="flex mt-10 space-x-4">
+      <!-- Login Section -->
+      <div id="login-section" class="w-1/2 bg-white p-6 rounded shadow-md">
+        <i class="fa fas fa-lock" aria-hidden="true"></i>
+          <h2 class="text-2xl font-bold mb-4 ">Login</h2>
+          <form>
+              <div class="mb-4">
+                  <label for="email" class="block text-gray-700">Email:</label>
+                  <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded">
+              </div>
+              <div class="mb-4">
+                  <label for="password" class="block text-gray-700">Password:</label>
+                  <input type="password" id="password" class="w-full p-2 border border-gray-300 rounded">
+              </div>
+              <button type="submit" class="px-4 py-2  text-white rounded bg-gradient-to-r from-[#ff6692] via-[#d669bf] to-[#a86bb9]">Login</button>
+          </form>
+      </div>
+
+      <!-- Register Section -->
+      <div id="register-section" class="w-1/2 bg-white p-6 rounded shadow-md">
+        <i class="fa fas fa-lock" aria-hidden="true"></i>
+          <h2 class="text-2xl font-bold mb-4">Register</h2>
+          <form>
+              <div class="mb-4">
+                  <label for="name" class="block text-gray-700">Name:</label>
+                  <input type="text" id="name" class="w-full p-2 border border-gray-300 rounded">
+              </div>
+              <div class="mb-4">
+                  <label for="email" class="block text-gray-700">Email:</label>
+                  <input type="email" id="email" class="w-full p-2 border border-gray-300 rounded">
+              </div>
+              <div class="mb-4">
+                  <label for="password" class="block text-gray-700">Password:</label>
+                  <input type="password" id="password" class="w-full p-2 border border-gray-300 rounded">
+              </div>
+              <button type="submit" class="px-4 py-2  text-white rounded bg-gradient-to-r from-[#ff6692] via-[#d669bf] to-[#a86bb9]">Register</button>
+          </form>
+      </div>
+  </div>
+</div>
+
+<footer class="bg-[#865471] md:flex md:items-center md:justify-between shadow  p-4 md:p-6 xl:p-8 mt-36">
+  <ul class="flex items-center flex-wrap mb-6 md:mb-0">
+      <li><a href="#" class="text-sm font-normal text-gray-200 hover:underline mr-4 md:mr-6">Terms and conditions</a>
+      </li>
+      <li><a href="#" class="text-sm font-normal text-gray-200 hover:underline mr-4 md:mr-6">Privacy Policy</a></li>
+      <li><a href="#" class="text-sm font-normal text-gray-200 hover:underline mr-4 md:mr-6">Licensing</a></li>
+      <li><a href="#" class="text-sm font-normal text-gray-200 hover:underline mr-4 md:mr-6">Cookie Policy</a></li>
+      <li><a href="#" class="text-sm font-normal text-gray-200 hover:underline">Contact</a></li>
+  </ul>
+  <div class="flex sm:justify-center space-x-6">
+    <a href="#" class="text-gray-200 hover:text-gray-900">
+        <i class="fab fa-facebook-f h-5 w-5"></i>
+    </a>
+    <a href="#" class="text-gray-200 hover:text-gray-900">
+        <i class="fab fa-instagram h-5 w-5"></i>
+    </a>
+    <a href="#" class="text-gray-200 hover:text-gray-900">
+        <i class="fab fa-twitter h-5 w-5"></i>
+    </a>
+    <a href="#" class="text-gray-200 hover:text-gray-900">
+        <i class="fab fa-github h-5 w-5"></i>
+    </a>
+    <a href="#" class="text-gray-200 hover:text-gray-900">
+        <i class="fab fa-google h-5 w-5"></i>
+    </a>
+</div>
+</footer>
+
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+
+
+
+
